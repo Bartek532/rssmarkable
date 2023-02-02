@@ -1,6 +1,6 @@
 import { memo } from "react";
 
-import { Button } from "../../common/Button";
+import { Button, BUTTON_VARIANT } from "../../common/Button";
 
 import { SyncItem } from "./SyncItem";
 
@@ -111,7 +111,7 @@ export const SyncsList = memo<SyncsListProps>(
                   <div className="flex flex-1 justify-between gap-2 sm:justify-end">
                     <Button
                       disabled={page === 1}
-                      variant="secondary"
+                      variant={BUTTON_VARIANT.SECONDARY}
                       onClick={() => onPageChange(page - 1)}
                     >
                       Previous
@@ -119,7 +119,7 @@ export const SyncsList = memo<SyncsListProps>(
 
                     <Button
                       disabled={(total ?? 0) < perPage * page}
-                      variant="secondary"
+                      variant={BUTTON_VARIANT.SECONDARY}
                       onClick={() => onPageChange(page + 1)}
                     >
                       Next

@@ -6,6 +6,7 @@ import EmptyFeedsIcon from "public/svg/empty-feeds.svg";
 
 import { Button } from "../../../components/common/Button";
 import { Empty } from "../../../components/common/Empty";
+import { Heading } from "../../../components/dashboard/heading/Heading";
 import { AddFeedModal } from "../../../components/modal/feed/AddFeedModal";
 import { FeedTile } from "../../../components/tile/feedTile/FeedTile";
 import { useGenericLoader } from "../../../hooks/useGenericLoader";
@@ -47,9 +48,7 @@ export const FeedsView = () => {
       />
       <section className="mx-auto mt-8 max-w-6xl px-4 sm:px-6 lg:mt-12 lg:px-8">
         <div className="flex w-full items-center justify-between">
-          <h2 className="text-lg font-medium leading-6 text-gray-900">
-            All feeds
-          </h2>
+          <Heading level={2}>All feeds</Heading>
           <Button onClick={() => setIsAddModalOpen(true)}>
             <PlusIcon className="h-6 w-6" /> Add feed
           </Button>

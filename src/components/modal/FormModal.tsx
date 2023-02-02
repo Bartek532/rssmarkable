@@ -1,4 +1,4 @@
-import { Button } from "../common/Button";
+import { Button, BUTTON_VARIANT } from "../common/Button";
 
 import { BaseModal } from "./BaseModal";
 
@@ -40,7 +40,11 @@ export const FormModal = ({
         </div>
       </div>
       <div className="flex justify-end gap-2 bg-gray-50 px-6 py-3">
-        <Button type="button" variant="secondary" onClick={onClose}>
+        <Button
+          type="button"
+          variant={BUTTON_VARIANT.SECONDARY}
+          onClick={onClose}
+        >
           Cancel
         </Button>
         <Button type="submit">{submitText}</Button>

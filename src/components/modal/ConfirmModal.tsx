@@ -1,6 +1,6 @@
 import { QuestionMarkCircleIcon } from "@heroicons/react/24/outline";
 
-import { Button } from "../common/Button";
+import { Button, BUTTON_VARIANT } from "../common/Button";
 
 import { BaseModal } from "./BaseModal";
 
@@ -27,7 +27,11 @@ export const ConfirmModal = ({
     <h3 className="text-bold text-3xl text-gray-600">Are you sure?</h3>
     <p className="text-center text-sm text-gray-500">{content}</p>
     <div className="flex gap-4">
-      <Button type="button" variant="secondary" onClick={onClose}>
+      <Button
+        type="button"
+        variant={BUTTON_VARIANT.SECONDARY}
+        onClick={onClose}
+      >
         Cancel
       </Button>
       <Button

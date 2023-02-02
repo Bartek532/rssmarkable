@@ -4,7 +4,7 @@ import { memo } from "react";
 import RemarkableIcon from "public/svg/remarkable.svg";
 
 import { onPromise } from "../../../utils/functions";
-import { Button } from "../../common/Button";
+import { Button, BUTTON_VARIANT } from "../../common/Button";
 
 import type { Device } from "@prisma/client";
 
@@ -32,7 +32,7 @@ export const DeviceTile = memo<DeviceTileProps>(({ device, onDelete }) => {
         <Button
           onClick={onPromise(onDelete)}
           className="bottom-10 right-10 mt-4 md:absolute lg:right-8 lg:bottom-8 xl:right-12 xl:bottom-12"
-          variant="danger"
+          variant={BUTTON_VARIANT.DANGER}
         >
           Delete device
         </Button>

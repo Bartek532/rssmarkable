@@ -67,6 +67,23 @@ export const unregisterAndDisconnectDeviceSchema = z.object({
   id: z.number(),
 });
 
+export const updateUserNameSchema = z.object({
+  content: z.string().min(1, "Name is required."),
+});
+
+export const updateUserEmailSchema = z.object({
+  content: z.string().email("Email must be a valid email."),
+});
+
+export const updateUserPasswordSchema = z.object({
+  content: z
+    .string()
+    .regex(
+      PASSWORD_REGEX,
+      "Password must contain an uppercase letter, a special character, a number and must be at least 8 characters long.",
+    ),
+});
+
 export type RegisterUserInput = TypeOf<typeof registerUserSchema>;
 export type LoginUserInput = TypeOf<typeof loginUserSchema>;
 export type CreateFeedInput = TypeOf<typeof createFeedSchema>;
