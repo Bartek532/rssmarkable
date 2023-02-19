@@ -9,6 +9,7 @@ import {
   deleteFeed,
   getAllFeeds,
   getFeedByUrl,
+  getFeedsFromOPML,
 } from "../services/feed.service";
 import { getApi } from "../services/remarkable.service";
 import { createSync, updateSync } from "../services/sync.service";
@@ -21,6 +22,7 @@ import {
 import type { FeedApi } from "../../../types/feed.types";
 import type {
   CreateAndConnectFeedInput,
+  CreateFeedsFromOPMLInput,
   DeleteAndDisconnectFeedInput,
   GetWebsiteDetailsInput,
   SyncArticleInput,
@@ -62,6 +64,26 @@ export const createFeedHandler = async ({
     console.error(err);
     throw err;
   }
+};
+
+export const createFeedsFromOPMLHandler = async ({
+  content,
+  id,
+}: CreateFeedsFromOPMLInput) => {
+  const urls = getFeedsFromOPML(content);
+
+  await Promise.all(
+    urls.map(async (url) => {
+      try {
+        await createFeedHandler({ url, id });
+      } catch (_err) {}
+    }),
+  );
+
+  return {
+    status: "Success",
+    message: `Successfully added feeds!`,
+  };
 };
 
 export const deleteFeedHandler = async ({
@@ -155,7 +177,7 @@ export const getFeedDetailsHandler = async ({
   url,
 }: GetWebsiteDetailsInput) => {
   try {
-    const feed = (await parse(url)) as FeedApi;
+    const feed = (await parse(url)) as FeedApi; // TODO: fix title
 
     return {
       status: "Success",

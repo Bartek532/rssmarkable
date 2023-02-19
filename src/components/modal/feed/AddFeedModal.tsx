@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 import { onPromise } from "../../../utils/functions";
 import { trpc } from "../../../utils/trpc";
 import { createFeedSchema } from "../../../utils/validation";
+import { FileUpload } from "../../common/FileUpload";
 import { Input } from "../../common/Input";
 import { FormModal } from "../FormModal";
 
@@ -33,6 +34,11 @@ export const AddFeedModal = memo<AddFeedModalProps>(({ onClose, ...props }) => {
   const addFeedMutation = trpc.feed.createFeed.useMutation({
     onSuccess: () => utils.user.getUserFeeds.invalidate(),
   });
+  const createFeedsFromOPMLMutation = trpc.feed.createFeedsFromOPML.useMutation(
+    {
+      onSuccess: () => utils.user.getUserFeeds.invalidate(),
+    },
+  );
 
   useEffect(() => {
     reset();
@@ -54,6 +60,23 @@ export const AddFeedModal = memo<AddFeedModalProps>(({ onClose, ...props }) => {
     );
   });
 
+  const handleFileUpload = async ([file]: File[]) => {
+    if (!file) {
+      return;
+    }
+
+    const content = await file.text();
+
+    await toast.promise(createFeedsFromOPMLMutation.mutateAsync({ content }), {
+      loading: "Adding feeds...",
+      success: ({ message }) => {
+        onClose();
+        return message;
+      },
+      error: (err: TRPCError | Error) => err.message,
+    });
+  };
+
   return (
     <FormModal
       onClose={onClose}
@@ -69,6 +92,21 @@ export const AddFeedModal = memo<AddFeedModalProps>(({ onClose, ...props }) => {
         error={errors.url}
         {...register("url")}
       />
+      <p className="mt-2 text-sm">
+        or{" "}
+        <FileUpload
+          // eslint-disable-next-line @typescript-eslint/no-misused-promises
+          onChange={handleFileUpload}
+          accept=".opml"
+        >
+          <button
+            type="button"
+            className="font-medium text-indigo-700 hover:text-indigo-900"
+          >
+            Import OPML file
+          </button>
+        </FileUpload>
+      </p>
     </FormModal>
   );
 });

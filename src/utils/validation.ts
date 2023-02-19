@@ -35,6 +35,10 @@ export const createAndConnectSchema = z.object({
   id: z.number(),
 });
 
+export const createFeedsFromOPMLSchema = z.object({
+  content: z.string(),
+});
+
 export const deleteFeedSchema = z.object({
   url: z.string().url(),
 });
@@ -74,6 +78,9 @@ export const syncArticleSchema = z.object({
 export type RegisterUserInput = TypeOf<typeof registerUserSchema>;
 export type LoginUserInput = TypeOf<typeof loginUserSchema>;
 export type CreateFeedInput = TypeOf<typeof createFeedSchema>;
+export type CreateFeedsFromOPMLInput = TypeOf<
+  typeof createFeedsFromOPMLSchema
+> & { id: number };
 export type CreateAndConnectFeedInput = TypeOf<typeof createAndConnectSchema>;
 export type DeleteFeedInput = TypeOf<typeof deleteFeedSchema>;
 export type DeleteAndDisconnectFeedInput = TypeOf<

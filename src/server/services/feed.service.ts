@@ -1,4 +1,7 @@
+import { XMLParser } from "fast-xml-parser";
+
 import { prisma } from "../../server/db/client";
+import { isURL } from "../../utils/url";
 
 import { getUserById } from "./user.service";
 
@@ -33,6 +36,26 @@ export const createFeed = async ({ url, id }: { url: string; id: number }) => {
   });
 
   return feed;
+};
+
+export const getFeedsFromOPML = (content: string) => {
+  try {
+    const urls: string[] = [];
+    const parser = new XMLParser({
+      ignoreAttributes: false,
+      attributeValueProcessor: (name, value) => {
+        if (name === "xmlUrl" && isURL(value)) {
+          urls.push(value);
+        }
+      },
+    });
+
+    parser.parse(content);
+
+    return urls;
+  } catch (err) {
+    return [];
+  }
 };
 
 export const getFeedByUrl = ({ url }: { url: string }) => {

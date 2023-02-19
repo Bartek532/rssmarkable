@@ -20,7 +20,8 @@ export const FeedTile = memo<FeedTileProps>(({ url, onChange, isChecked }) => {
 
   useGenericLoader(isLoading);
 
-  if (!data) {
+  // TODO: fix title
+  if (!data || !(typeof data.feed.title === "string")) {
     return null;
   }
 

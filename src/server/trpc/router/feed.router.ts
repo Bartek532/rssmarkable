@@ -1,5 +1,6 @@
 import {
   createFeedHandler,
+  createFeedsFromOPMLHandler,
   deleteFeedHandler,
   getAllFeedsHandler,
   getFeedDetailsHandler,
@@ -7,6 +8,7 @@ import {
 } from "../../../server/controllers/feed.controller";
 import {
   createFeedSchema,
+  createFeedsFromOPMLSchema,
   deleteFeedSchema,
   getWebsiteDetailsSchema,
   syncArticleSchema,
@@ -18,6 +20,11 @@ export const feedRouter = router({
     .input(createFeedSchema)
     .mutation(({ input, ctx }) =>
       createFeedHandler({ ...input, id: ctx.session.user.id }),
+    ),
+  createFeedsFromOPML: protectedProcedure
+    .input(createFeedsFromOPMLSchema)
+    .mutation(({ input, ctx }) =>
+      createFeedsFromOPMLHandler({ ...input, id: ctx.session.user.id }),
     ),
   deleteFeed: protectedProcedure
     .input(deleteFeedSchema)
