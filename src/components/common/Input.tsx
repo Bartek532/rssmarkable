@@ -17,7 +17,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ error, isValidated, children, ...props }, ref) => {
     return (
       <div>
-        <label className="block text-sm font-medium text-gray-700">
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">
           {children}
         </label>
         <div className="relative mt-1 rounded-md shadow-sm">
@@ -25,7 +25,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             ref={ref}
             {...props}
             className={twMerge(
-              "block w-full rounded-md border-gray-300 py-2.5 px-4 transition ease-in-out focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm",
+              "block w-full rounded-md border-gray-300 py-2.5 px-4 transition ease-in-out focus:border-indigo-500 focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:focus:border-indigo-500 dark:focus:ring-indigo-500 sm:text-sm",
               error && "border-red-500",
             )}
             type={props.type ?? "text"}

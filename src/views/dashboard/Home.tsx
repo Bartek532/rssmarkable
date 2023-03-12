@@ -92,7 +92,7 @@ export const HomeView = () => {
         isOpen={isSyncArticleModalOpen}
         onClose={() => setIsSyncArticleModalOpen(false)}
       />
-      <div className="bg-white shadow">
+      <div className="bg-white shadow dark:bg-slate-900">
         <div className="px-4 sm:px-6 lg:mx-auto lg:max-w-6xl lg:px-8">
           <div className="py-6 md:flex md:items-center md:justify-between">
             <Profile user={data?.user} isRegistered={!!device} />
@@ -143,8 +143,8 @@ export const HomeView = () => {
             </div>
           ) : (
             <Empty onCreateNew={onPromise(feedsSyncHandler)}>
-              <EmptySyncsIcon className="h-50 mx-auto w-40 text-gray-400" />
-              <span className="mt-6 block text-lg font-medium text-gray-900">
+              <EmptySyncsIcon className="h-50 mx-auto w-40 text-gray-400 dark:text-gray-500" />
+              <span className="mt-6 block text-lg font-medium text-gray-900 dark:text-white">
                 You haven&apos;t synced any feeds yet!
               </span>
             </Empty>

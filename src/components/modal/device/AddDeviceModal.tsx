@@ -72,7 +72,7 @@ export const AddDeviceModal = memo<AddDeviceModalProps>(
           error={errors.code}
           {...register("code")}
         />
-        <p className="mt-3 text-xs text-gray-500">
+        <p className="mt-3 text-xs text-gray-500 dark:text-gray-400">
           You can find one-time code on{" "}
           <a
             href="https://my.remarkable.com/device/desktop/connect"

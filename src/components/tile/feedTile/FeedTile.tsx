@@ -35,7 +35,7 @@ export const FeedTile = memo<FeedTileProps>(({ url, onChange, isChecked }) => {
         />
         <div
           className={twMerge(
-            "group relative flex w-full items-center rounded-2xl bg-white p-2 shadow focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 md:py-1",
+            "group relative flex w-full items-center rounded-2xl bg-white dark:bg-slate-800/30 p-2 shadow focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 md:py-1",
             isChecked && "ring-2 ring-indigo-500 ring-offset-2",
           )}
         >
@@ -44,7 +44,7 @@ export const FeedTile = memo<FeedTileProps>(({ url, onChange, isChecked }) => {
             style={{ backgroundImage: `url(${data.feed.image ?? ""})` }}
           ></div>
           <div className="p-3 pr-10 md:py-0">
-            <h3 className="text-base font-medium sm:text-lg">
+            <h3 className="text-base font-medium sm:text-lg dark:text-white">
               <a
                 href={data.feed.url}
                 className="focus:outline-none"

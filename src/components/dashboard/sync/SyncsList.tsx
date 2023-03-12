@@ -21,7 +21,7 @@ export const SyncsList = memo<SyncsListProps>(
         <div className=" shadow sm:hidden">
           <ul
             role="list"
-            className="mt-2 divide-y divide-gray-200 overflow-hidden shadow sm:hidden"
+            className="mt-2 divide-y divide-gray-200 overflow-hidden shadow dark:divide-gray-700 sm:hidden"
           >
             {syncs.map((sync) => (
               <SyncItem sync={sync} key={sync.id} />
@@ -29,19 +29,19 @@ export const SyncsList = memo<SyncsListProps>(
           </ul>
 
           <nav
-            className="flex items-center justify-between bg-gray-50 px-4 py-3"
+            className="flex items-center justify-between bg-gray-50 px-4 py-3 dark:bg-gray-800"
             aria-label="Pagination"
           >
             <div className="flex flex-1 justify-between">
               <a
                 href="#"
-                className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-500"
+                className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-500 dark:bg-gray-700 dark:text-gray-200"
               >
                 Previous
               </a>
               <a
                 href="#"
-                className="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-500"
+                className="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-500 dark:bg-gray-700 dark:text-gray-200"
               >
                 Next
               </a>
@@ -56,32 +56,32 @@ export const SyncsList = memo<SyncsListProps>(
                   <thead>
                     <tr>
                       <th
-                        className="bg-gray-50 px-6 py-3 text-left text-sm font-semibold text-gray-900"
+                        className="bg-gray-50 px-6 py-3 text-left text-sm font-semibold text-gray-900 dark:bg-gray-800"
                         scope="col"
                       >
                         Sync uid
                       </th>
                       <th
-                        className="whitespace-nowrap bg-gray-50 px-6 py-3 text-right text-sm font-semibold text-gray-900"
+                        className="whitespace-nowrap bg-gray-50 px-6 py-3 text-right text-sm font-semibold text-gray-900 dark:bg-gray-800"
                         scope="col"
                       >
                         Synced articles
                       </th>
                       <th
-                        className="hidden bg-gray-50 px-6 py-3 text-left text-sm font-semibold text-gray-900 md:block"
+                        className="hidden bg-gray-50 px-6 py-3 text-left text-sm font-semibold text-gray-900 dark:bg-gray-800 md:block"
                         scope="col"
                       >
                         Status
                       </th>
                       <th
-                        className="bg-gray-50 px-6 py-3 text-right text-sm font-semibold text-gray-900"
+                        className="bg-gray-50 px-6 py-3 text-right text-sm font-semibold text-gray-900 dark:bg-gray-800"
                         scope="col"
                       >
                         Date
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-gray-200 bg-white">
+                  <tbody className="divide-y divide-gray-200 bg-white dark:divide-gray-700">
                     {syncs.map((sync) => (
                       <SyncItem sync={sync} key={sync.id} />
                     ))}
@@ -89,7 +89,7 @@ export const SyncsList = memo<SyncsListProps>(
                 </table>
 
                 <nav
-                  className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6"
+                  className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 dark:border-gray-700 dark:bg-gray-800 sm:px-6"
                   aria-label="Pagination"
                 >
                   <div className="hidden sm:block">

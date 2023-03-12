@@ -96,7 +96,7 @@ export const FeedsView = () => {
       />
       <section className="mx-auto mt-8 max-w-6xl px-4 sm:px-6 lg:mt-12 lg:px-8">
         <div className="flex w-full flex-wrap items-center justify-between gap-3">
-          <h2 className="text-lg font-medium leading-6 text-gray-900">
+          <h2 className="text-lg font-medium leading-6 text-gray-900 dark:text-white">
             All feeds
           </h2>
           <div className="flex gap-3">
@@ -127,7 +127,7 @@ export const FeedsView = () => {
 
         {feeds?.length ? (
           <>
-            <label className="mt-4 ml-auto flex w-fit cursor-pointer gap-7 font-medium">
+            <label className="mt-4 ml-auto flex w-fit cursor-pointer gap-7 font-medium dark:text-gray-300">
               <Checkbox
                 name="all"
                 onChange={handleSelectAllChange}
@@ -150,8 +150,8 @@ export const FeedsView = () => {
           </>
         ) : (
           <Empty onCreateNew={() => setIsAddModalOpen(true)}>
-            <EmptyFeedsIcon className="h-50 mx-auto w-40 text-gray-400" />
-            <span className="mt-6 block text-lg font-medium text-gray-900">
+            <EmptyFeedsIcon className="h-50 mx-auto w-40 text-gray-400 dark:text-gray-500" />
+            <span className="mt-6 block text-lg font-medium text-gray-900 dark:text-white">
               You haven&apos;t added any feed yet!
             </span>
           </Empty>

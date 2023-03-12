@@ -26,12 +26,12 @@ export const Profile = memo<ProfileProps>(({ user, isRegistered }) => {
         <div>
           <div className="flex items-center">
             {width <= 640 && <Avatar image={user.image} name={user.name} />}
-            <h1 className="ml-3 text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:leading-9">
+            <h1 className="ml-3 text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:leading-9 dark:text-gray-100">
               Welcome back, {user.name?.split(" ")[0] ?? user.email}!
             </h1>
           </div>
           <dl className="mt-6 flex flex-col sm:ml-3 sm:mt-1 sm:flex-row sm:flex-wrap">
-            <dt className="sr-only">Account status</dt>
+            <dt className="sr-only dark:text-gray-300">Account status</dt>
             <dd className="mt-3 flex items-center text-sm font-medium text-gray-500 sm:mr-6 sm:mt-0">
               {isRegistered ? (
                 <>
@@ -39,7 +39,9 @@ export const Profile = memo<ProfileProps>(({ user, isRegistered }) => {
                     className="mr-1.5 h-5 w-5 flex-shrink-0 text-green-400"
                     aria-hidden="true"
                   />
-                  Device registered - sync active
+                  <span className="dark:text-gray-400">
+                    Device registered - sync active
+                  </span>
                 </>
               ) : (
                 <>

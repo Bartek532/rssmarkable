@@ -1,16 +1,16 @@
 <svg viewBox="0 0 480 577" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M11.5541 2.31081H384.75C389.855 2.31081 393.993 6.44915 393.993 11.5541V336.169C394.762 336.135 395.532 336.105 396.304 336.081V11.5541C396.304 5.17293 391.131 0 384.75 0H11.5541C5.17293 0 0 5.17292 0 11.554V501.446C0 507.827 5.17293 513 11.5541 513H238.549C238.487 512.231 238.429 511.461 238.377 510.689H11.5541C6.44916 510.689 2.31081 506.551 2.31081 501.446V11.554C2.31081 6.44915 6.44915 2.31081 11.5541 2.31081Z" fill="black"/>
-<line x1="397.901" y1="410.061" x2="397.901" y2="576.741" stroke="black" stroke-width="3"/>
-<line x1="313.061" y1="491.9" x2="479.741" y2="491.9" stroke="black" stroke-width="3"/>
-<line x1="28.5" y1="33.5" x2="311.612" y2="33.5" stroke="black" stroke-width="3" stroke-linecap="round"/>
-<line x1="28.4951" y1="64.4788" x2="210.506" y2="64.4788" stroke="black" stroke-width="3" stroke-linecap="round"/>
-<line x1="28.5" y1="127.5" x2="210.511" y2="127.5" stroke="black" stroke-width="3" stroke-linecap="round"/>
-<line x1="28.5" y1="158.5" x2="257.509" y2="158.5" stroke="black" stroke-width="3" stroke-linecap="round"/>
-<line x1="28.4922" y1="96" x2="311.508" y2="96" stroke="black" stroke-width="3" stroke-linecap="round"/>
-<line x1="28.5078" y1="189.5" x2="311.62" y2="189.5" stroke="black" stroke-width="3" stroke-linecap="round"/>
-<line x1="28.5029" y1="220.479" x2="210.514" y2="220.479" stroke="black" stroke-width="3" stroke-linecap="round"/>
-<line x1="28.5078" y1="283.5" x2="210.519" y2="283.5" stroke="black" stroke-width="3" stroke-linecap="round"/>
-<line x1="28.5078" y1="314.5" x2="257.516" y2="314.5" stroke="black" stroke-width="3" stroke-linecap="round"/>
-<line x1="28.5" y1="252" x2="311.516" y2="252" stroke="black" stroke-width="3" stroke-linecap="round"/>
-<line x1="28.5029" y1="345.5" x2="210.514" y2="345.5" stroke="black" stroke-width="3" stroke-linecap="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.5541 2.31081H384.75C389.855 2.31081 393.993 6.44915 393.993 11.5541V336.169C394.762 336.135 395.532 336.105 396.304 336.081V11.5541C396.304 5.17293 391.131 0 384.75 0H11.5541C5.17293 0 0 5.17292 0 11.554V501.446C0 507.827 5.17293 513 11.5541 513H238.549C238.487 512.231 238.429 511.461 238.377 510.689H11.5541C6.44916 510.689 2.31081 506.551 2.31081 501.446V11.554C2.31081 6.44915 6.44915 2.31081 11.5541 2.31081Z" fill="currentColor"/>
+<line x1="397.901" y1="410.061" x2="397.901" y2="576.741" stroke="currentColor" stroke-width="3"/>
+<line x1="313.061" y1="491.9" x2="479.741" y2="491.9" stroke="currentColor" stroke-width="3"/>
+<line x1="28.5" y1="33.5" x2="311.612" y2="33.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+<line x1="28.4951" y1="64.4788" x2="210.506" y2="64.4788" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+<line x1="28.5" y1="127.5" x2="210.511" y2="127.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+<line x1="28.5" y1="158.5" x2="257.509" y2="158.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+<line x1="28.4922" y1="96" x2="311.508" y2="96" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+<line x1="28.5078" y1="189.5" x2="311.62" y2="189.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+<line x1="28.5029" y1="220.479" x2="210.514" y2="220.479" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+<line x1="28.5078" y1="283.5" x2="210.519" y2="283.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+<line x1="28.5078" y1="314.5" x2="257.516" y2="314.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+<line x1="28.5" y1="252" x2="311.516" y2="252" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+<line x1="28.5029" y1="345.5" x2="210.514" y2="345.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
 </svg>

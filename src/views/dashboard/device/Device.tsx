@@ -38,7 +38,7 @@ export const DeviceView = () => {
         onClose={() => setIsAddModalOpen(false)}
       />
       <section className="mx-auto mt-8 max-w-6xl px-4 sm:px-6 lg:mt-12 lg:px-8">
-        <h2 className="text-lg font-medium leading-6 text-gray-900">
+        <h2 className="text-lg font-medium leading-6 text-gray-900 dark:text-white">
           Your device
         </h2>
 
@@ -48,8 +48,8 @@ export const DeviceView = () => {
           </div>
         ) : (
           <Empty onCreateNew={() => setIsAddModalOpen(true)}>
-            <EmptyDeviceIcon className="h-50 mx-auto w-40 text-gray-400" />
-            <span className="mt-6 block text-lg font-medium text-gray-900">
+            <EmptyDeviceIcon className="h-50 mx-auto w-40 text-gray-400 dark:text-white" />
+            <span className="mt-6 block text-lg font-medium text-gray-900 dark:text-white">
               You haven&apos;t registered your device yet, do it to unlock sync!
               🔄
             </span>

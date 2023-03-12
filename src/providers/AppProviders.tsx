@@ -1,5 +1,6 @@
 import { SessionProvider } from "next-auth/react";
 
+import { ThemeProvider } from "./ThemeProvider";
 import { UIProvider } from "./UIProvider";
 
 import type { Session } from "next-auth";
@@ -12,6 +13,8 @@ type AppProvidersProps = Readonly<{
 
 export const AppProviders = ({ session, children }: AppProvidersProps) => (
   <SessionProvider session={session}>
-    <UIProvider>{children}</UIProvider>
+    <ThemeProvider>
+      <UIProvider>{children}</UIProvider>
+    </ThemeProvider>
   </SessionProvider>
 );

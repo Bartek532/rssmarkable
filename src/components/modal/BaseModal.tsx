@@ -34,7 +34,7 @@ export const BaseModal = ({
 
   return (
     <Transition
-      className="fixed top-0 left-0 z-50 flex h-full w-full overflow-y-auto bg-gray-500/75 p-3 transition-opacity duration-200"
+      className="fixed top-0 left-0 z-50 flex h-full w-full overflow-y-auto bg-gray-500/75 p-3 transition-opacity duration-200 dark:bg-black/75"
       show={isOpen}
       onClick={onClose}
       afterLeave={unlockScroll}
@@ -46,7 +46,7 @@ export const BaseModal = ({
       <div
         ref={containerRef}
         className={twMerge(
-          "m-auto flex w-full flex-col overflow-hidden rounded-lg bg-white",
+          "m-auto flex w-full flex-col overflow-hidden rounded-lg bg-white dark:bg-slate-900",
           className,
         )}
         onClick={(event) => {

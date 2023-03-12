@@ -38,14 +38,14 @@ export const Sidebar = memo<SidebarProps>(
                 href={item.href}
                 className={clsx(
                   pathname === item.href
-                    ? "bg-indigo-800 text-white"
-                    : "text-indigo-100 hover:bg-indigo-600 hover:text-white",
-                  "group flex items-center rounded-md px-2 py-2 text-sm font-medium leading-6",
+                    ? "bg-indigo-800 text-white dark:bg-indigo-500/20 dark:text-indigo-200"
+                    : "text-indigo-100 hover:bg-indigo-600 hover:text-white dark:text-indigo-200 dark:hover:bg-indigo-500/20",
+                  "group flex items-center rounded-md px-2 py-2 text-sm font-medium leading-6 transition",
                 )}
                 aria-current={pathname === item.href ? "page" : undefined}
               >
                 <item.icon
-                  className="mr-4 h-6 w-6 flex-shrink-0 text-indigo-200"
+                  className="mr-4 h-6 w-6 flex-shrink-0 text-indigo-200 dark:text-indigo-300"
                   aria-hidden="true"
                 />
                 {item.name}
@@ -60,13 +60,13 @@ export const Sidebar = memo<SidebarProps>(
                   href={item.href}
                   className={clsx(
                     pathname === item.href
-                      ? "bg-indigo-800 text-white"
-                      : "text-indigo-100 hover:bg-indigo-600 hover:text-white",
-                    "group flex items-center rounded-md px-2 py-2 text-sm font-medium leading-6",
+                      ? "bg-indigo-800 text-white dark:bg-indigo-500/20 dark:text-indigo-200"
+                      : "text-indigo-100 hover:bg-indigo-600 hover:text-white dark:text-indigo-200 dark:hover:bg-indigo-500/20",
+                    "group flex items-center rounded-md px-2 py-2 text-sm font-medium leading-6 transition",
                   )}
                 >
                   <item.icon
-                    className="mr-4 h-6 w-6 text-indigo-200"
+                    className="mr-4 h-6 w-6 text-indigo-200 dark:text-indigo-300"
                     aria-hidden="true"
                   />
                   {item.name}

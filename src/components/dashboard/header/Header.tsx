@@ -21,10 +21,10 @@ interface HeaderProps {
 
 export const Header = memo<HeaderProps>(({ user, onSidebarOpen }) => {
   return (
-    <div className="flex h-16 flex-shrink-0 border-b border-gray-200 bg-white shadow lg:border-none">
+    <div className="flex h-16 flex-shrink-0 border-b border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-slate-900 lg:border-none">
       <button
         type="button"
-        className="border-r border-gray-200 px-4 text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 lg:hidden"
+        className="border-r border-gray-200 px-4 text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 dark:border-gray-700 lg:hidden"
         onClick={onSidebarOpen}
       >
         <span className="sr-only">Open sidebar</span>
@@ -34,7 +34,7 @@ export const Header = memo<HeaderProps>(({ user, onSidebarOpen }) => {
         <div className="ml-4 flex items-center md:ml-6">
           <button
             type="button"
-            className="rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            className="rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-black dark:bg-transparent dark:text-gray-300"
           >
             <span className="sr-only">View notifications</span>
             <BellIcon className="h-6 w-6" aria-hidden="true" />
@@ -42,9 +42,9 @@ export const Header = memo<HeaderProps>(({ user, onSidebarOpen }) => {
 
           <Menu as="div" className="relative ml-3">
             <div>
-              <Menu.Button className="flex max-w-xs items-center gap-2 rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 lg:rounded-md lg:p-2 lg:hover:bg-gray-50">
+              <Menu.Button className="flex max-w-xs items-center gap-2 rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-slate-900 dark:text-gray-300 dark:hover:bg-slate-800 lg:rounded-md lg:p-2">
                 <Avatar image={user?.image} name={user?.name} isSmall />
-                <span className="ml-3 hidden text-sm font-medium text-gray-700 lg:block">
+                <span className="ml-3 hidden text-sm font-medium text-gray-700 dark:text-gray-300 lg:block">
                   <span className="sr-only">Open user menu for </span>
                   {user?.name?.split(" ")[0] ?? user?.email ?? "Guest"}
                 </span>
@@ -63,14 +63,14 @@ export const Header = memo<HeaderProps>(({ user, onSidebarOpen }) => {
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+              <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-slate-900">
                 <Menu.Item>
                   {({ active }) => (
                     <Link
                       href="/dashboard/settings"
                       className={clsx(
-                        active ? "bg-gray-100" : "",
-                        "block px-4 py-2 text-sm text-gray-700",
+                        active ? "bg-gray-100 dark:bg-gray-700" : "",
+                        "block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 dark:hover:bg-slate-800",
                       )}
                     >
                       Settings
@@ -81,8 +81,8 @@ export const Header = memo<HeaderProps>(({ user, onSidebarOpen }) => {
                   {({ active }) => (
                     <button
                       className={clsx(
-                        active ? "bg-gray-100" : "",
-                        "block w-full px-4 py-2 text-left text-sm text-gray-700",
+                        active ? "bg-gray-100 dark:bg-gray-700" : "",
+                        "block w-full px-4 py-2 text-left text-sm text-gray-700 dark:text-gray-300 dark:hover:bg-slate-800",
                       )}
                       onClick={onPromise(() => signOut())}
                     >

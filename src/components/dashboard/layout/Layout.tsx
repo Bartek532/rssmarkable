@@ -19,7 +19,7 @@ export const DashboardLayout = memo<DashboardLayoutProps>(({ children }) => {
   const { data } = useSession();
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
       <Transition.Root show={isSidebarOpen} as={Fragment}>
         <Dialog
           as="div"
@@ -48,7 +48,7 @@ export const DashboardLayout = memo<DashboardLayoutProps>(({ children }) => {
               leaveFrom="translate-x-0"
               leaveTo="-translate-x-full"
             >
-              <Dialog.Panel className="relative flex w-full max-w-xs flex-1 flex-col bg-indigo-700 pt-5 pb-4">
+              <Dialog.Panel className="relative flex w-full max-w-xs flex-1 flex-col bg-indigo-700 pt-5 pb-4 dark:bg-slate-900">
                 <Transition.Child
                   as={Fragment}
                   enter="ease-in-out duration-300"
@@ -84,7 +84,7 @@ export const DashboardLayout = memo<DashboardLayoutProps>(({ children }) => {
       </Transition.Root>
 
       <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col">
-        <div className="flex flex-grow flex-col overflow-y-auto bg-indigo-700 pt-5 pb-4">
+        <div className="flex flex-grow flex-col overflow-y-auto bg-indigo-700 pt-5 pb-4 dark:border-r dark:border-slate-800/50 dark:bg-slate-900/50">
           <Sidebar
             navigation={DASHBOARD_NAVIGATION}
             secondaryNavigation={DASHBOARD_SECONDARY_NAVIGATION}

@@ -19,20 +19,23 @@ export const Tile = memo<TileProps>(({ card }) => {
   return (
     <div
       key={card.title}
-      className="overflow-hidden rounded-lg bg-white shadow"
+      className="overflow-hidden rounded-lg bg-white shadow-md dark:bg-slate-800/20 dark:shadow-slate-900"
     >
       <div className="p-5">
         <div className="flex items-center">
           <div className="flex-shrink-0">
-            <card.icon className="h-6 w-6 text-gray-400" aria-hidden="true" />
+            <card.icon
+              className="h-6 w-6 text-gray-400 dark:text-gray-300"
+              aria-hidden="true"
+            />
           </div>
           <div className="ml-5 w-0 flex-1">
             <dl>
-              <dt className="truncate text-sm font-medium text-gray-500">
+              <dt className="truncate text-sm font-medium text-gray-500 dark:text-gray-400">
                 {card.title}
               </dt>
               <dd>
-                <div className="text-lg font-medium text-gray-900">
+                <div className="text-lg font-medium text-gray-900 dark:text-gray-100">
                   {card.value}
                 </div>
               </dd>
@@ -40,11 +43,11 @@ export const Tile = memo<TileProps>(({ card }) => {
           </div>
         </div>
       </div>
-      <div className="bg-gray-50 px-5 py-3">
+      <div className="bg-slate-50 px-5 py-3 dark:bg-slate-800/30">
         <div className="text-sm">
           <Link
             href={card.href}
-            className="font-medium text-indigo-700 hover:text-indigo-900"
+            className="font-medium text-indigo-700 hover:text-indigo-900 dark:text-indigo-300 dark:hover:text-indigo-400"
           >
             {card.link}
           </Link>

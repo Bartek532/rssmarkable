@@ -32,9 +32,9 @@ export const Avatar = memo<AvatarProps>(({ image, name, isSmall = false }) => {
 
   return (
     <span
-      className={`inline-block h-${size} w-${size} overflow-hidden rounded-full bg-gray-100`}
+      className={`inline-block h-${size} w-${size} overflow-hidden rounded-full bg-gray-100 dark:bg-gray-800`}
     >
-      <AvatarIcon className="h-full w-full text-gray-300" />
+      <AvatarIcon className="h-full w-full text-gray-300 dark:text-gray-600" />
     </span>
   );
 });
