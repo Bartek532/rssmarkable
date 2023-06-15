@@ -3,6 +3,11 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { createSafeContext } from "../utils/createSafeContext";
 
+export const AVAILABLE_THEMES = [
+  { name: "Light", value: "light" },
+  { name: "Dark", value: "dark" },
+];
+
 export enum THEME {
   LIGHT = "light",
   DARK = "dark",
