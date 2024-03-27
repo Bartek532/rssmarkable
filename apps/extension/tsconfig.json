@@ -1,0 +1,26 @@
+{
+  "extends": "@rssmarkable/config/tsconfig/base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "noEmit": true,
+    "module": "esnext",
+    "jsx": "react-jsx",
+    "resolveJsonModule": true,
+    "types": ["vite/client", "node"],
+    "allowSyntheticDefaultImports": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "typeRoots": ["./src/global.d.ts", "node_modules/@types"],
+    "paths": {
+      "@/*": ["src/*"],
+      "virtual:reload-on-update-in-background-script": ["./src/global.d.ts"],
+      "virtual:reload-on-update-in-view": ["./src/global.d.ts"]
+    }
+  },
+  "include": [
+    "src",
+    "utils",
+    "vite.config.ts",
+    "manifest.js",
+    "node_modules/@types"
+  ]
+}

@@ -1,3 +1,13 @@
 import { createBrowserClient } from "@rssmarkable/database";
 
-export const supabase = () => createBrowserClient();
+import type { SupabaseClient } from "@rssmarkable/database";
+
+let client: SupabaseClient | null = null;
+
+export const supabase = () => {
+  if (!client) {
+    client = createBrowserClient();
+  }
+
+  return client;
+};

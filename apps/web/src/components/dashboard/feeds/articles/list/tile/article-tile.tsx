@@ -1,9 +1,9 @@
+import { removeProtocolsFromUrl } from "@rssmarkable/shared";
 import { ArrowUpRight } from "lucide-react";
 import { memo } from "react";
 
-import { api } from "../../../../../../trpc/server";
-import { removeProtocolsFromUrl } from "../../../../../../utils";
-import { Avatar, AvatarFallback, AvatarImage } from "../../../../../ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { api } from "@/trpc/server";
 
 type ArticleTileProps = {
   readonly url: string;

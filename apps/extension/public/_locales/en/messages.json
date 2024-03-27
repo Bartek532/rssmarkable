@@ -1,0 +1,10 @@
+{
+  "extensionDescription": {
+    "description": "Extension description",
+    "message": "Seamlessly sync articles and feeds from the web."
+  },
+  "extensionName": {
+    "description": "Extension name",
+    "message": "RSSmarkable"
+  }
+}

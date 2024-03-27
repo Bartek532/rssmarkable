@@ -1,27 +1,19 @@
 module.exports = {
-  parser: "@typescript-eslint/parser",
   parserOptions: {
-    project: [
-      "../../apps/sync/tsconfig.json",
-      "../../packages/database/tsconfig.json",
-      "../../packages/shared/tsconfig.json",
-    ],
+    project: ["../../../apps/extension/tsconfig.json"],
     tsconfigRootDir: __dirname,
-    sourceType: "module",
   },
-  plugins: ["@typescript-eslint"],
+  globals: {
+    chrome: true,
+  },
   extends: [
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:@typescript-eslint/strict",
-    "plugin:import/recommended",
-    "plugin:import/typescript",
   ],
-  ignorePatterns: [".*.js", "node_modules/", "dist/"],
-  env: {
-    node: true,
-    jest: true,
-  },
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint", "import"],
+  ignorePatterns: [".*.js", "*.cjs", "node_modules/"],
   settings: {
     "import/parsers": {
       "@typescript-eslint/parser": [".ts"],
@@ -38,7 +30,6 @@ module.exports = {
   },
   rules: {
     "@typescript-eslint/consistent-type-imports": "warn",
-    "@typescript-eslint/no-extraneous-class": "off",
     "import/order": [
       "error",
       {
@@ -46,6 +37,13 @@ module.exports = {
           caseInsensitive: true,
           order: "asc",
         },
+        pathGroups: [
+          {
+            pattern: "@/**",
+            group: "internal",
+            position: "before",
+          },
+        ],
         groups: [
           ["builtin", "external"],
           "internal",

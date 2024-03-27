@@ -1,4 +1,4 @@
 {
-  "extends": "@rssmarkable/tsconfig/base.json",
-  "include": ["**/*.ts", "**/*.tsx", "tsup.config.ts"]
+  "extends": "@rssmarkable/config/tsconfig/base.json",
+  "include": ["**/*.ts", "**/*.tsx", "config/*.js", "tsup.config.ts"]
 }

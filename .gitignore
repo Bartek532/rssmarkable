@@ -47,3 +47,6 @@ yarn-error.log*
 # supabase
 .branches
 .temp
+
+# chrome extension
+apps/extension/utils/reload/**/*.js

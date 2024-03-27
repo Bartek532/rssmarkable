@@ -17,9 +17,8 @@ COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 COPY apps/sync/package.json ./apps/sync/
 
 COPY packages/database/package.json ./packages/database/
-COPY packages/eslint-preset/package.json ./packages/eslint-preset/
+COPY packages/config/package.json ./packages/config/
 COPY packages/shared/package.json ./packages/shared/
-COPY packages/tsconfig/package.json ./packages/tsconfig/
 
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
 

@@ -1,2 +1,2 @@
 /** @type {import("eslint").Linter.Config} */
-module.exports = require("@rssmarkable/eslint-preset/client");
+module.exports = require("@rssmarkable/config/eslint/client");

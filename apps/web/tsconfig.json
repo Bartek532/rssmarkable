@@ -1,5 +1,5 @@
 {
-  "extends": "@rssmarkable/tsconfig/base.json",
+  "extends": "@rssmarkable/config/tsconfig/base.json",
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "noEmit": true,
@@ -23,8 +23,6 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "**/*.cjs",
-    "**/*.mjs",
     "next.config.js",
     ".next/types/**/*.ts"
   ]

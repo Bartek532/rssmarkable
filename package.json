@@ -6,6 +6,7 @@
     "build": "dotenv -- turbo build",
     "build:web": "dotenv -- turbo build --filter=web",
     "build:sync": "dotenv -- turbo build --filter=sync",
+    "build:extension": "dotenv -- turbo build --filter=extension",
     "build:apps": "dotenv -- turbo build --filter=./apps/*",
     "build:packages": "dotenv -- turbo build --filter=./packages/*",
     "clean": "turbo clean && rm -rf node_modules",

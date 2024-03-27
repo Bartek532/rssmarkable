@@ -1,6 +1,6 @@
 module.exports = {
   parserOptions: {
-    project: ["../../apps/web/tsconfig.json"],
+    project: ["../../../apps/web/tsconfig.json"],
     tsconfigRootDir: __dirname,
   },
   env: {
@@ -19,7 +19,7 @@ module.exports = {
   ],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
-  ignorePatterns: [".*.js", "node_modules/"],
+  ignorePatterns: [".*.js", "*.cjs", "node_modules/"],
   settings: {
     "import/parsers": {
       "@typescript-eslint/parser": [".ts"],

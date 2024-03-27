@@ -1,3 +1,4 @@
+import "@rssmarkable/config/ui/css/globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";

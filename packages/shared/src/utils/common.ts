@@ -4,3 +4,6 @@ export const clearUrl = (url: string) => {
   parsed.hash = "";
   return parsed.toString();
 };
+
+export const removeProtocolsFromUrl = (url: string) =>
+  url.replace(/^(https?:\/\/)?(www\.)?/, "");

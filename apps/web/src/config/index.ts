@@ -159,7 +159,7 @@ export const PRICING_PLANS = [
       {
         available: true,
         new: false,
-        title: "Feeds subscriptions",
+        title: "Feeds management",
       },
       {
         available: true,

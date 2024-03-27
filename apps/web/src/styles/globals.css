@@ -1,39 +1,7 @@
-@import "variables.css";
-@import "markdown.css";
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-* {
-  @apply border-border;
+.markdown a {
+  @apply font-bold underline hover:no-underline;
 }
 
-body {
-  @apply bg-background text-foreground;
-  font-feature-settings: "rlig" 1, "calt" 1;
-}
-
-#__next {
-  @apply flex min-h-full flex-col;
-}
-
-*::selection {
-  @apply bg-primary text-background;
-}
-
-*::-webkit-scrollbar {
-  @apply h-2 w-2.5;
-}
-
-*::-webkit-scrollbar-track {
-  @apply bg-muted;
-}
-
-*::-webkit-scrollbar-thumb {
-  @apply rounded-lg bg-muted-foreground/50;
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  @apply bg-muted-foreground;
+.markdown code {
+  font-family: var(--font-poppins);
 }
