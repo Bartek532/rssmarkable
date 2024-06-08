@@ -1,4 +1,4 @@
-<a href="https://syncreads.com"><img src="https://github.com/Bartek532/syncreads/blob/main/docs/images/banner.png?raw=true" width="100%"></a>
+<a href="https://syncreads.com"><img src="https://github.com/Bartek532/syncreads/blob/main/docs/images/grid.png?raw=true" width="100%"></a>
 
 ## Project Overview 🎨
 
